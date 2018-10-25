@@ -200,40 +200,41 @@
 				    </div>    
 				</div>
 				
-					
+				<form method="POST">
+					{% csrf_token %}
+
 					<div class="row">
 						<label class="col-12 text-center agenteHeader">Agregar agente</label>
 					</div>
 					
-					<form>
 						<div class="form-inline row margenBottom15">
 							<label for="hostnameFor" class="col-sm-2 text-light textInfoCard">Hostname</label>
 							<div class="col-sm-1"></div>
-							<input class="col-sm-7" type="text" class="form-control" id="hostnameInput" placeholder="">
+							<input class="col-sm-7" type="text" class="form-control" id="hostnameInput" name="hostnameInput" placeholder="">
 						</div>
 						
 						<div class="form-inline row margenBottom15">
 							<label for="versionSNMPFor" class="col-sm-2 col-form-label text-light textInfoCard">VersionSNMP</label>
 							<div class="col-sm-1"></div>
-							<input class="col-sm-7" type="text" class="form-control" id="versionsnmpInput" placeholder="">
+							<input class="col-sm-7" type="text" class="form-control" id="versionsnmpInput" name="versionsnmpInput" placeholder="">
 						</div>
 						
 						<div class="form-inline row margenBottom15">
 							<label for="puertoFor" class="col-sm-2 col-form-label text-light textInfoCard">Puerto</label>
 							<div class="col-sm-1"></div>
-							<input class="col-sm-7" type="text" class="form-control" id="puertoInput" placeholder="">
+							<input class="col-sm-7" type="text" class="form-control" id="puertoInput" name="puertoInput" placeholder="">
 						</div>
 						
 						<div class="form-inline row margenBottom15">
 							<label for="comunidadFor" class="col-sm-2 col-form-label text-light textInfoCard">Comunidad</label>
 							<div class="col-sm-1"></div>
-							<input class="col-sm-7" type="text" class="form-control" id="comunidadInput" placeholder="">
+							<input class="col-sm-7" type="text" class="form-control" id="comunidadInput" name="comunidadInput" placeholder="">
 						</div>		
 						
 						<div class="form-inline row margenBottom15">
 							<label for="nombreFor" class="col-sm-2 col-form-label text-light textInfoCard">Nombre</label>
 							<div class="col-sm-1"></div>
-							<input class="col-sm-7" type="text" class="form-control" id="nombreInput" placeholder="">
+							<input class="col-sm-7" type="text" class="form-control" id="nombreInput" name="nombreInput" placeholder="">
 						</div>	
 						
 						<div class="row" style="margin-top: 20px; margin-bottom:20px;">
@@ -245,8 +246,7 @@
 							</div>
 						</div>
 						
-																
-					</form>	
+					</form>											
 					
 				</div>
 				</div> <!--Fin ventana modal-->
