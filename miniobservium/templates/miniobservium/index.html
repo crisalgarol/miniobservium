@@ -1,0 +1,270 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mini Observium</title>
+	<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Agregando bootstrap-->
+    <link rel="stylesheet" href="{% static 'estilos/bootstrap.min.css' %}"></link>
+    <link rel="stylesheet" href="{% static 'estilos/fontawesome-all.css' %}"></link>    
+    <!--Estilos-->
+    <link rel="stylesheet" href="{% static 'estilos/main.css' %}">
+
+</head>
+
+<body>
+<div class="container">
+  <div class="titleBar">
+    <div class="left-buttons">
+      <span class="dot" style="background:#ED594A;" onclick="activarModal()"></span>
+      <span class="dot" style="background:#FDD800;"></span>
+      <span class="dot" style="background:#5AC05A;"></span>
+    </div>
+    
+    <div class="title-page">
+      <label class="text-light" style="font-family:Helvetica-light; font-size: 15px;">Mini Observium</label>
+    </div>    
+ </div>
+
+
+  <div class="content paddingIgual">
+	  
+	  <!--Numero de equipos monitoreando-->
+	 <div class="row numeroMonitoreo" >
+		 <label class="col-12 text-light text-right" style="padding: 0px">Monitoreando 1</label>
+	 </div>
+	 
+	 <!--Agregar un agente-->
+		<div class="row" style="background-color:#2D2B2C; padding: 5px;">
+			<div class="col-8"></div>
+		
+			<div class="col-4 text-right" style="padding-right: 0px;">
+				<img src="{% static 'images/add.png' %}" class="imageAdd" data-toggle="modal" data-target="exampleModal" onclick="activarModal()">
+				<label class="nuevoAgenteTexto" onclick="activarModal()">Agregar nuevo agente</label> 				
+			</div>
+			
+		</div>	 
+	
+    <div class="recyclerContainer ">
+	    
+
+		<!--CardView-->
+		<div class="row cardview">
+			<!--Imagen del SO-->
+			<div class="col-1">
+				<img src="{% static 'images/delete.png' %}" class="imageDelete">
+				<img src="{% static 'images/linux.png' %}" class="imageRecycle">
+			</div>
+			
+			<!--Informacion del sistema-->
+			<div class="col-8" >
+				<label class="textInfoCard" id="nombreAgente">AristidesAriza</label>
+				<label class="textInfoCard" id="comunidad">Comunidad: comunidadASR</label>
+				<label class="textInfoCard" id="ip">192.168.43.48</label>
+				<label class="textInfoCard" id="contact_info">Contacto: arizamtz2303@gmail.com</label>
+				<label class="textInfoCard" id="localizacion">Localización física: Redes3</label>
+				<label class="textInfoCard" id="so_name"><b>Linux Mint 19</b></label>
+			</div>
+			
+			<!--Informacion de interfaces-->
+			<div class="col-3 text-right">
+				<label class="statusInterfaceText" id="estadoInterfaz">Estado: UP</label>
+				<label class="interfazRed">WLAN: UP</label>
+				<label class="interfazRed">WiFi: UP</label>
+				<label class="interfazRed">BLUETOOTH: Down</label>
+
+				<label class="infoAzul" id="tiempoMaquina" style="margin-top: 10px">Tiempo: 24:04</label>
+				<label class="infoAzul" id="tiempoMaquina">Interfaces conectadas: 10</label>
+
+			</div>
+			
+		</div>
+		
+				<!--CardView-->
+		<div class="row cardview">
+			<!--Imagen del SO-->
+			<div class="col-1">
+				<img src="{% static 'images/delete.png' %}" class="imageDelete">
+				<img src="{% static 'images/windows.png' %}" class="imageRecycle">
+			</div>
+			
+			<!--Informacion del sistema-->
+			<div class="col-8" >
+				<label class="textInfoCard" id="nombreAgente">AristidesAriza</label>
+				<label class="textInfoCard" id="comunidad">Comunidad: comunidadASR</label>
+				<label class="textInfoCard" id="ip">192.168.43.48</label>
+				<label class="textInfoCard" id="contact_info">Contacto: arizamtz2303@gmail.com</label>
+				<label class="textInfoCard" id="localizacion">Localización física: Redes3</label>
+				<label class="textInfoCard" id="so_name"><b>Linux Mint 19</b></label>
+			</div>
+			
+			<!--Informacion de interfaces-->
+			<div class="col-3 text-right">
+				<label class="statusInterfaceText" id="estadoInterfaz">Estado: UP</label>
+				<label class="interfazRed">WLAN: UP</label>
+				<label class="interfazRed">WiFi: UP</label>
+				<label class="interfazRed">BLUETOOTH: Down</label>
+
+				<label class="infoAzul" id="tiempoMaquina" style="margin-top: 10px">Tiempo: 24:04</label>
+				<label class="infoAzul" id="tiempoMaquina">Interfaces conectadas: 10</label>
+
+			</div>
+			
+		</div>
+				<!--CardView-->
+		<div class="row cardview">
+			<!--Imagen del SO-->
+			<div class="col-1">
+				<img src="{% static 'images/delete.png' %}" class="imageDelete">
+				<img src="{% static 'images/linux.png' %}" class="imageRecycle">
+			</div>
+			
+			<!--Informacion del sistema-->
+			<div class="col-8" >
+				<label class="textInfoCard" id="nombreAgente">AristidesAriza</label>
+				<label class="textInfoCard" id="comunidad">Comunidad: comunidadASR</label>
+				<label class="textInfoCard" id="ip">192.168.43.48</label>
+				<label class="textInfoCard" id="contact_info">Contacto: arizamtz2303@gmail.com</label>
+				<label class="textInfoCard" id="localizacion">Localización física: Redes3</label>
+				<label class="textInfoCard" id="so_name"><b>Linux Mint 19</b></label>
+			</div>
+			
+			<!--Informacion de interfaces-->
+			<div class="col-3 text-right">
+				<label class="statusInterfaceText" id="estadoInterfaz">Estado: UP</label>
+				<label class="interfazRed">WLAN: UP</label>
+				<label class="interfazRed">WiFi: UP</label>
+				<label class="interfazRed">BLUETOOTH: Down</label>
+
+				<label class="infoAzul" id="tiempoMaquina" style="margin-top: 10px">Tiempo: 24:04</label>
+				<label class="infoAzul" id="tiempoMaquina">Interfaces conectadas: 10</label>
+
+			</div>
+			
+		</div>
+				<!--CardView-->
+		<div class="row cardview">
+			<!--Imagen del SO-->
+			<div class="col-1">
+				<img src="{% static 'images/delete.png' %}" class="imageDelete">
+				<img src="{% static 'images/linux.png' %}" class="imageRecycle">
+			</div>
+			
+			<!--Informacion del sistema-->
+			<div class="col-8" >
+				<label class="textInfoCard" id="nombreAgente">AristidesAriza</label>
+				<label class="textInfoCard" id="comunidad">Comunidad: comunidadASR</label>
+				<label class="textInfoCard" id="ip">192.168.43.48</label>
+				<label class="textInfoCard" id="contact_info">Contacto: arizamtz2303@gmail.com</label>
+				<label class="textInfoCard" id="localizacion">Localización física: Redes3</label>
+				<label class="textInfoCard" id="so_name"><b>Linux Mint 19</b></label>
+			</div>
+			
+			<!--Informacion de interfaces-->
+			<div class="col-3 text-right">
+				<label class="statusInterfaceText" id="estadoInterfaz">Estado: UP</label>
+				<label class="interfazRed">WLAN: UP</label>
+				<label class="interfazRed">WiFi: UP</label>
+				<label class="interfazRed">BLUETOOTH: Down</label>
+
+				<label class="infoAzul" id="tiempoMaquina" style="margin-top: 10px">Tiempo: 24:04</label>
+				<label class="infoAzul" id="tiempoMaquina">Interfaces conectadas: 10</label>
+
+			</div>
+			
+		</div>
+				
+    </div>
+    <div class="footer"></div>
+
+  </div>
+  
+
+		<div class="customModal col-12 mx-auto" id="customModal" > 
+			
+		  	<div class="ventanaModal">
+			  	
+			  	<!--Borde de venta-->
+		        <div class="titleBar">
+				    <div class="left-buttons">
+				      <span class="dot" style="background:#ED594A;"></span>
+				      <span class="dot" style="background:#FDD800;"></span>
+				      <span class="dot" style="background:#5AC05A;"></span>
+				    </div>
+				    
+				    <div class="title-page">
+				      <label class="text-light" style="font-family:Helvetica-light; font-size: 12px;">Dialogo</label>
+				    </div>    
+				</div>
+				
+					
+					<div class="row">
+						<label class="col-12 text-center agenteHeader">Agregar agente</label>
+					</div>
+					
+					<form>
+						<div class="form-inline row margenBottom15">
+							<label for="hostnameFor" class="col-sm-2 text-light textInfoCard">Hostname</label>
+							<div class="col-sm-1"></div>
+							<input class="col-sm-7" type="text" class="form-control" id="hostnameInput" placeholder="">
+						</div>
+						
+						<div class="form-inline row margenBottom15">
+							<label for="versionSNMPFor" class="col-sm-2 col-form-label text-light textInfoCard">VersionSNMP</label>
+							<div class="col-sm-1"></div>
+							<input class="col-sm-7" type="text" class="form-control" id="versionsnmpInput" placeholder="">
+						</div>
+						
+						<div class="form-inline row margenBottom15">
+							<label for="puertoFor" class="col-sm-2 col-form-label text-light textInfoCard">Puerto</label>
+							<div class="col-sm-1"></div>
+							<input class="col-sm-7" type="text" class="form-control" id="puertoInput" placeholder="">
+						</div>
+						
+						<div class="form-inline row margenBottom15">
+							<label for="comunidadFor" class="col-sm-2 col-form-label text-light textInfoCard">Comunidad</label>
+							<div class="col-sm-1"></div>
+							<input class="col-sm-7" type="text" class="form-control" id="comunidadInput" placeholder="">
+						</div>		
+						
+						<div class="form-inline row margenBottom15">
+							<label for="nombreFor" class="col-sm-2 col-form-label text-light textInfoCard">Nombre</label>
+							<div class="col-sm-1"></div>
+							<input class="col-sm-7" type="text" class="form-control" id="nombreInput" placeholder="">
+						</div>	
+						
+						<div class="row" style="margin-top: 20px; margin-bottom:20px;">
+							<div class="col-6">
+								<button type="submit" class="btn btn-dark text-center">Aceptar</button>
+							</div>
+							<div class="col-6">
+								<button type="button" onclick="activarModal()" class="btn btn-danger text-center">Cancelar</button>
+							</div>
+						</div>
+						
+																
+					</form>	
+					
+				</div>
+				</div> <!--Fin ventana modal-->
+		  	</div>
+	  	</div>
+
+</div>
+
+  
+  
+</div>
+
+
+
+<!--JAVASCRIPT JQUERY -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+/*Declaracion de fuentes*/
+
+/*Helvetica Neue*/
+@font-face {
+  font-family: "Helvetica-Bold";
+  src: url("fonts/HelveticaNBold.woff2");
+}
+
+@font-face {
+  font-family: "Helvetica-UltraLight";
+  src: url("fonts/HelveticaNBoldUltraLight.woff2");
+}
+
+@font-face {
+  font-family: "Helvetica-Light";
+  src: url("fonts/HelveticaNLight.woff2");
+}
+
+@font-face {
+  font-family: "Helvetica-Thin";
+  src: url("fonts/HelveticaNThin.woff2");
+}
+
+/*Menlo*/
+@font-face {
+  font-family: "Menlo-regular";
+  src: url("fonts/Menlo-regular.woff2");
+}
+
+body {
+    font-family: Arial;
+     background-color: #2D2B2C;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Container for columns and the top "toolbar" */
+.titleBar {
+    padding: 5px;
+    background: #3B3939;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.title-page {
+    margin-left: -35px;
+}
+
+.left-buttons {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+}
+
+.left {
+    width: 15%;
+}
+
+.right {
+    width: 10%;
+}
+
+.middle {
+    width: 75%;
+}
+
+/* Clear floats after the columns */
+.titleBar:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Three dots */
+.dot {
+    margin-top: 4px;
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+/* Page content */
+.content {
+	background-color: #000;
+	/*margin: 50px 80px 80px 10px;*/
+}
+
+
+/*RecyclerContainer*/
+.recyclerContainer{
+	background-color: #2D2B2C;
+	overflow: scroll;
+	height: 350px;
+	margin-left: -15px;
+    margin-right: -15px;
+}
+
+.footer {
+    height: 70px;
+}
+
+.margenIgual{
+	margin-right: 25px;
+	margin-left: 25px;
+}
+
+.paddingIgual{
+	padding-right: 40px;
+	padding-left: 40px;
+}
+
+.recycleCell{
+	background-color: #2B292A;
+
+}
+
+.imageRecycle{
+	width:60px;
+	height:70px;
+	padding: 5px;
+}
+
+.textInfoCard{
+	color: white;
+	display: block;
+	margin-bottom: 0;
+	font-size: 17px;
+	font-family: "Helvetica-UltraLight";
+}
+
+.statusInterfaceText{
+	color: #70BF41;
+	display: block;
+	margin-bottom: 5px;
+	font-size: 17px;
+	font-family: "Menlo-regular";
+	
+}
+
+.interfazRed{
+	color:white;
+	display:block;
+	margin-bottom: 0px;
+	font-size: 15px;
+	font-family: "Menlo-regular";
+}
+
+.infoAzul{
+	color:#51A7F9;
+	display: block;
+	margin-bottom: 0px;
+	font-size: 14px;
+	font-family: "Menlo-regular";
+}
+
+.cardview{
+	padding: 10px;
+	background-color: #2B292A;
+}
+
+.nuevoAgenteTexto{
+	color:white;
+	font-family: "Helvetica-Thin";
+	font-size: 23px;
+	margin: 0px; 
+	padding: 10px;
+}
+
+.imageDelete{
+	width:15px;
+	height:15px;
+}
+
+.imageAdd{
+	width:35px;
+	height:35px;	
+	}
+
+.numeroMonitoreo{
+	font-family: "Menlo-regular";
+	font-size: 30px;
+	padding-top: 30px;
+}
+
+/*Agregar agente modal*/
+.ventanaModal{
+	background-color: #2B292A;
+	width: 800px;
+	margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.botonAceptar{
+	background-color: #555555;
+	color: #FFF;
+}
+
+.customModal{
+	 visibility: hidden;
+     position: absolute;
+     align-content: center;
+     left: 0px;
+     top: 0px;
+     width:100%;
+     height:100%;
+     text-align:center;
+     z-index: 1000;
+	 background-color: rgba(0, 0, 0, 0.7);
+	 }
+
+.margenBottom15{
+	margin-bottom: 15px;
+}
+
+.agenteHeader{
+	color: white;
+	font-size: 20px;
+	margin-bottom: 20px;
+	font-family: "Helvetica-Thin";
+}
+
+
+/*Directo a Id*/
+#so_name{
+	font-family: "Helvetica-Bold";
+	font-size: 15px;
+}
+
+
